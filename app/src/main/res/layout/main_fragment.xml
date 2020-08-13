@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.MainFragment">
+
+    <Button
+        android:id="@+id/btnListUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="LIST USERS"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/deleteUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnListUsers">
+
+        <Button
+            android:id="@+id/btnDeleteUser"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="DELETE USER" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserIdToDelete"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:digits="123456789"
+            android:hint="Enter user id"
+            android:inputType="number"
+            android:textColor="#000"
+            android:textColorHint="#000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/addUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/deleteUserLayout">
+
+        <Button
+            android:id="@+id/btnAddUser"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="ADD USER" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserName"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:hint="Enter name"
+            android:textColor="#000"
+            android:textColorHint="#000" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRoleId"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:digits="123456789"
+            android:hint="Enter role id"
+            android:inputType="number"
+            android:textColor="#000"
+            android:textColorHint="#000" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchUserLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addUserLayout">
+
+        <Button
+            android:id="@+id/btnSearchUser"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="SEARCH USER" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserNmeToSearch"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter user name to search"
+            android:textColor="#000"
+            android:textColorHint="#000" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnRoleWithPermissions"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="10dp"
+        android:text="PRINT ROLE WITH PERMISSIONS "
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchUserLayout" />
+
+
+    <LinearLayout
+        android:id="@+id/checkPermissionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnRoleWithPermissions">
+
+        <Button
+            android:id="@+id/btnCheck"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="CHECK PERMISSION" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight=".7"
+                android:hint="Enter name"
+                android:textColor="#000"
+                android:textColorHint="#000" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPermission"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:digits="123456789"
+                android:hint="Enter website id"
+                android:inputType="number"
+                android:textColor="#000"
+                android:textColorHint="#000" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/checkPermissionLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkPermissionLayout">
+
+        <Button
+            android:id="@+id/btnCheck2"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:text="CHECK PERMISSION" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etName2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight=".7"
+                android:hint="Enter name"
+                android:textColor="#000"
+                android:textColorHint="#000" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/etPermission2"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="Enter Url"
+                android:textColor="#000"
+                android:textColorHint="#000" />
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
